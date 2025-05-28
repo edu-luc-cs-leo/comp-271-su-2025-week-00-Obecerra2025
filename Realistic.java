@@ -60,6 +60,15 @@ public class Realistic {
         arr = temporary; // array shorted by 1 (removing smallest elem)
         return result; // smallest element
     } // method getSmallest
+    
+    public static void add(int value) {
+        int[] increaseArr = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
+            increaseArr[i] = arr[i];
+        }
+        increaseArr[arr.length] = value;
+        arr = increaseArr;
+    }
 
     /** Driver/simple test code */
     public static void main(String[] args) {
